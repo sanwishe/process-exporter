@@ -19,7 +19,7 @@ var (
 
 func main() {
 	root := &cobra.Command{
-		Use:   "processes_exporter",
+		Use:   "processes-exporter",
 		Short: `Export detail metrics of processes`,
 		Args: func(cmd *cobra.Command, args []string) error {
 			if len(args) < minArgsNum {
@@ -34,6 +34,8 @@ func main() {
 
 		Version: version.FullVersion(),
 	}
+
+	//root.Flags().AddFlag()
 
 	if err := root.Execute(); err != nil {
 		os.Exit(1)

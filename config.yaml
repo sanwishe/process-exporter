@@ -1,0 +1,10 @@
+pids:
+  - 1
+  - 18374
+process_matchers:
+  - command:
+      - kube-apiserver
+      - kubelet
+      - kube-controller-manager
+  - exec:
+      - /usr/bin/kube-apiserver
